@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/market.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive_main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive_market.css' %}">
+    <script src="https://kit.fontawesome.com/140219e2b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="flex">
+                    <div class="logo">
+                        <a href="/"><img src="{% static 'img/logo.png'%}" alt="logo" width="100%"></a>
+                    </div>
+                    <nav>
+                        <a href="login"><img src="{% static 'img/icons/user.png'%}" alt=""></a>
+                        <a href="orders"><img src="{% static 'img/icons/shopping-bag.png'%}" alt=""></a>
+                        <a href="favorite"><img src="{% static 'img/icons/heart.png'%}" alt=""></a>
+                        <a href="sale"><img src="{% static 'img/icons/shopping-cart.png'%}" alt=""></a>
+                    </nav>
+                    <div class="search-header">
+                        <input type="text" placeholder="Искать товары:">
+                        <button><img src="{% static 'img/icons/search.png'%}" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-mobile">
+        <div class="wrapper">
+            <div class="flex">
+                <div class="logo-mobile" onclick="return_top()">
+                    <img src="{% static 'img/logo.png'%}" alt="logo" width="100%">
+                </div>
+                <div class="burger-menu" onclick="open_close()">
+                    <div class="menu-inner">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-links">
+            <div class="wrapper">
+                <a href="/"> <img src="./images/logo.png" alt=""> Главная</a>
+                <a href="about"> <img src="./icons/aboutus.png" alt=""> О нас</a>
+                <a href="market"> <img src="./icons/shop2.png" alt=""> Маркет</a>
+                <a href="orders"> <img src="./icons/shopping-bag.png" alt=""> Заказы</a>
+                <a href="favorite"> <img src="./icons/heart.png" alt=""> Избранное</a>
+                <a href="#"> <img src="./icons/shopping-cart.png" alt=""> Кoрзина</a>
+                <a href="sale"> <img src="./icons/akciya.png" alt=""> Акции</a>
+                <a href="#"> <img src="./icons/help.webp" alt=""> Помощь</a>
+                <a href="login"> <img src="./icons/user.png" alt=""> Войти</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="second-nav">
+            <div class="link-nav">
+                <img src="{% static 'img/icons/aboutus.png'%}" alt=""><a href="about">О нас</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'img/icons/shop2.png'%}" alt=""><a href="market">Маркет</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'img/icons/akciya.png'%}" alt=""><a href="sale">Акции</a>
+            </div>
+            <div class="link-nav">
+                <img src="{% static 'img/icons/help.webp'%}" alt=""><a href="#">Помощь</a>
+            </div>
+        </div>
+    </div>
+    <div class="search-header-mobile">
+        <input type="text" placeholder="Искать товары:">
+        <button><img src="{% static 'img/icons/search.png'%}" alt=""></button>
+    </div>
+
+    <section id="categories">
+        <div class="wrapper">
+
+            <div class="name">
+                <h1>Категории</h1>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <img src="{% static 'img/mebel.png'%}" alt="">
+                    <a href="#">Мебель</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/sport.png'%}" alt="">
+                    <a href="#">Спорт</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/tehnika.png'%}" alt="">
+                    <a href="#">Электроника</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/eda.png'%}" alt="">
+                    <a href="#">Продукты питания</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <img src="{% static 'img/medicina.png'%}" alt="">
+                    <a href="#">Медицина</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/books.png'%}" alt="">
+                    <a href="#">Книги</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/kids.png'%}" alt="">
+                    <a href="#">Для детей</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/stroi.png'%}" alt="">
+                    <a href="#">Строительные материалы</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <img src="{% static 'img/music.png'%}" alt="">
+                    <a href="#">Музыкальные Инструменты</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/canc.webp'%}" alt="">
+                    <a href="#">Канцелярия</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/home.png'%}" alt="">
+                    <a href="#">Товары для дома</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/auto.png'%}" alt="">
+                    <a href="#">Автотовары</a>
+                </div>
+            </div>
+
+            <div class="row hidden expandable">
+                <div class="card">
+                    <img src="{% static 'img/kosmetika.png'%}" alt="">
+                    <a href="#">Косметика</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/house.png'%}" alt="">
+                    <a href="#">Посуда</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/zoo.png'%}" alt="">
+                    <a href="#">Зоотовары</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/turkish.png'%}" alt="">
+                    <a href="#">Одежда, обувь</a>
+                </div>
+            </div>
+
+            <div class="row hidden expandable">
+                <div class="card">
+                    <img src="{% static 'img/health.png'%}" alt="">
+                    <a href="#">Здоровье</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/18.png'%}" alt="">
+                    <a href="#">Товары для взрослых</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/qqqq.png'%}" alt="">
+                    <a href="#">Бытовая техника</a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/tabik.png'%}" alt="">
+                    <a href="#">Отдых и Природа</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="btn-container">
+            <button class="expand-btn">Расширить</button>
+        </div>
+    </section>
+
+    <section id="pre-footer">
+        <div class="wrapper">
+            <div class="text">
+                <h1>Выгода с доставкой</h1>
+                <p>Подпишитесь и получайте промокоды, акции и подборки товаров на почту.</p>
+            </div>
+            <div class="search-footer">
+                <input type="email" placeholder="Введите вашу почту:">
+                <button>Подробнее</button>
+            </div>
+            <div class="text textp">
+                <p>Нажимая «Подписаться» вы соглашаетесь с <span> Условиями использования сайта </span> и <span>
+                        Политикой обработки
+                        персональных данных. </span> </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <hr>
+            <div class="footer-inner">
+                <div class="footer-flex">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <h3>Маркетплейс</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link1">
+                            <a href="">О компании</a>
+                            <a href="">Контакты</a>
+                            <a href="">Вакансии</a>
+                            <a href="">Реквизиты</a>
+                            <a href="">Партнерская программа</a>
+                            <a href="">Настоящий маркетплейс</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Покупателю</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link2">
+                            <a href="">Помощь покупателю</a>
+                            <a href="">Доставка</a>
+                            <a href="">Акции</a>
+                            <a href="">Оплата</a>
+                            <a href="">Возврат</a>
+                            <a href="">Промокоды</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Правовая информация</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link3">
+                            <a href="">Условия пользования сайтом</a>
+                            <a href="">Полтика обработки персональных данных</a>
+                            <a href="">Условия заказа и доставки</a>
+                            <a href="">Правила сервиса</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="link">
+                        <h3>Магазинам</h3>
+                        <input type="checkbox" name="toggle" id="toggle" class="toggleMenu">
+                        <label for="sub_m1" class="toggleMenu"><i class="fa"></i></label>
+                        <div class="links" id="link4">
+                            <a href="">Помощь магазинам</a>
+                            <a href="">Приглашение к сотрудничеству</a>
+                            <a href="">Вход в личный кабинет</a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="logo mobile-logo">
+                        <img src="./images/logo.png" alt="">
+                        <div class="icons">
+                            <a href=""><img src="./icons/instagram-black.png" alt=""></a>
+                            <a href=""><img src="./icons/facebook.png" alt=""></a>
+                            <a href=""><img src="./icons/telegram-black.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/market.js' %}"></script>
+</body>
+
+</html>

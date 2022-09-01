@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive_signin.css' %}">
+    <script src="https://kit.fontawesome.com/140219e2b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="popup_form">
+            <div class="form">
+                <div class="img">
+                    <a href="./main.html"> <img src="./images/logo.png" alt=""></a>
+                </div>
+                <div class="input">
+                    <label for="email"> <b>Электронная почта</b> </label>
+                    <input type="email" name="email" placeholder="email@gmail.com">
+                </div>
+
+                <div class="input">
+                    <label for="password"> <b>Пароль</b> </label>
+                    <input type="password" name="password" placeholder="**********">
+                </div>
+
+                <div class="input">
+                    <input type="checkbox" name="checkbox" id="" checked>
+                    <label for="checkbox" style="display: inline;">Получать новости на почту</label>
+                </div>
+
+                <div class="input">
+                    <input type="button" value="Зарегистрироваться">
+                </div>
+
+
+                <p id="or">ИЛИ</p>
+
+                <div class="form_icons">
+                    <img src="./icons/gmail.png" alt="">
+                    <img src="./icons/facebook1 (1).png" alt="">
+                    <img src="./icons/twitter.png" alt="">
+                </div>
+
+                <p>Уже зарегистрированы? <a href="login">Войдите</a> </p>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
